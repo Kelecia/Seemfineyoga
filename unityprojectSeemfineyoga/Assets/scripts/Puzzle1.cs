@@ -26,6 +26,8 @@ public class Puzzle1 : MonoBehaviour
         if (index == correctOrder[currentStep])
         {
             // Correct click
+            Color newColor = glowColor;
+            newColor.a = 1f; // Ensure the color is fully opaque
             triangles[index].GetComponent<SpriteRenderer>().color = glowColor;
             currentStep++;
 
@@ -48,6 +50,8 @@ public class Puzzle1 : MonoBehaviour
     {
         for (int i = 0; i < triangles.Length; i++)
         {
+            Color resetColor = originalColors[i];
+            resetColor.a = 1f; // Ensure the color is fully opaque
             triangles[i].GetComponent<SpriteRenderer>().color = originalColors[i];
         }
     }

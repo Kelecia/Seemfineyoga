@@ -300,7 +300,7 @@ MonoBehaviour:
   - {fileID: 37899319}
   - {fileID: 1214378198}
   - {fileID: 1350528504}
-  glowColor: {r: 1, g: 1, b: 1, a: 0}
+  glowColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &55885067
 Transform:
   m_ObjectHideFlags: 0
