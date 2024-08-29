@@ -11,7 +11,7 @@ public class Puzzle1 : MonoBehaviour
     private Color[] originalColors; // To store the original colors of the triangles
     public GameObject yogalady;
 
-    private int[] correctOrder = { 0, 1, 2, 3 }; // The correct order of clicks (indices of triangles)
+    private int[] correctOrder = { 0, 1, 2, 3, 4 }; // The correct order of clicks (indices of triangles)
     private int currentStep = 0; // To track the current step in the sequence
 
     void Start()
