@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Puzzle1 : MonoBehaviour
 {
+    public GameObject musicObject; // Reference to the music GameObject
+
     public GameObject[] triangles; // Array to hold your triangles
     public Color glowColor; // Color to change to when glowing
     private Color[] originalColors; // To store the original colors of the triangles
@@ -74,6 +76,27 @@ public class Puzzle1 : MonoBehaviour
         else
         {
             Debug.LogWarning("Yogalady object not assigned.");
+        }
+        PlayMusic();
+    }
+
+    private void PlayMusic()
+    {
+        if (musicObject != null)
+        {
+            AudioSource audioSource = musicObject.GetComponent<AudioSource>();
+            if (audioSource != null)
+            {
+                audioSource.Play(); // Play the music
+            }
+            else
+            {
+                Debug.LogWarning("No AudioSource component found on the music object.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Music object not assigned.");
         }
     }
 }
