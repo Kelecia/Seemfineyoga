@@ -6,6 +6,18 @@ public class Draggable : MonoBehaviour
 {
     private bool isDragging = false;
     private Vector3 offset;
+    private Rigidbody2D rb;
+
+    public float detachForce = 10f; // Force applied when detaching
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody2D component not found!");
+        }
+    }
 
     void OnMouseDown()
     {
@@ -16,13 +28,21 @@ public class Draggable : MonoBehaviour
     void OnMouseUp()
     {
         isDragging = false;
+
+        if (rb != null)
+        {
+            rb.isKinematic = false; // Ensure Rigidbody is not kinematic
+            rb.gravityScale = 1f; // Apply gravity
+            rb.AddForce(Vector2.down * detachForce, ForceMode2D.Impulse); // Apply force to simulate falling
+        }
     }
 
     void Update()
     {
         if (isDragging)
         {
-            transform.position = GetMouseWorldPos() + offset;
+            Vector3 newPosition = GetMouseWorldPos() + offset;
+            rb.MovePosition(newPosition); // Move the Rigidbody2D directly
         }
     }
 
