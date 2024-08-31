@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - symbol
+  - RightLeg
   layers:
   - Default
   - TransparentFX

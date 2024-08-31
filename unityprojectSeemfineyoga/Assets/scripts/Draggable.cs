@@ -9,6 +9,7 @@ public class Draggable : MonoBehaviour
     private Rigidbody2D rb;
 
     public float detachForce = 10f; // Force applied when detaching
+    public ParticleSystem particleEffect; // Reference to the existing particle effect
 
     void Start()
     {
@@ -23,6 +24,12 @@ public class Draggable : MonoBehaviour
     {
         isDragging = true;
         offset = transform.position - GetMouseWorldPos();
+
+        // Play the particle effect if the object is tagged as "RightLeg"
+        if (gameObject.CompareTag("RightLeg") && particleEffect != null)
+        {
+            particleEffect.Play(); // Play the particle effect
+        }
     }
 
     void OnMouseUp()
