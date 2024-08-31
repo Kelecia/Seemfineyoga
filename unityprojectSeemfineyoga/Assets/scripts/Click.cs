@@ -16,9 +16,18 @@ public class Click : MonoBehaviour
 
     void OnMouseDown()
     {
-        // Trigger the animation
+        // Check if the puzzle is completed
+        Puzzle1 puzzle = FindObjectOfType<Puzzle1>();
+        if (puzzle != null && puzzle.IsPuzzleCompleted())
+        {
+            return; // Puzzle is completed, do not play the animation
+        }
+
+        // Trigger the animation if the puzzle is not completed
         animator.SetTrigger("PlayAnimation");
 
-        FindObjectOfType<Puzzle1>().OnTriangleClicked(index);
+        // Notify the puzzle manager of the click
+        puzzle.OnTriangleClicked(index);
     }
 }
+

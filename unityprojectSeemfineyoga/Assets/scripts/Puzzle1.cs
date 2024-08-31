@@ -14,6 +14,8 @@ public class Puzzle1 : MonoBehaviour
     private int[] correctOrder = { 0, 1, 2, 3, 4 }; // The correct order of clicks (indices of triangles)
     private int currentStep = 0; // To track the current step in the sequence
 
+    private bool puzzleCompleted = false;
+
     void Start()
     {
         // Initialize original colors
@@ -26,6 +28,11 @@ public class Puzzle1 : MonoBehaviour
 
     public void OnTriangleClicked(int index)
     {
+        if (puzzleCompleted)
+        {
+            return; // If the puzzle is completed, do nothing
+        }
+
         if (index == correctOrder[currentStep])
         {
             // Correct click
@@ -38,6 +45,7 @@ public class Puzzle1 : MonoBehaviour
             if (currentStep == correctOrder.Length)
             {
                 Debug.Log("Puzzle Completed!");
+                puzzleCompleted = true;
                 PlayYogaladyAnimation();
             }
         }
@@ -98,5 +106,10 @@ public class Puzzle1 : MonoBehaviour
         {
             Debug.LogWarning("Music object not assigned.");
         }
+    }
+
+    public bool IsPuzzleCompleted()
+    {
+        return puzzleCompleted;
     }
 }
