@@ -122,6 +122,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &127156211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127156212}
+  - component: {fileID: 127156213}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127156212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127156211}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.86, y: 0.93, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3534108514218989273}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &127156213
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127156211}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &652344880
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &652344881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1380,7 +1439,8 @@ GameObject:
   - component: {fileID: 8901957195650739758}
   - component: {fileID: 8901957195650739757}
   - component: {fileID: 8901957195650739756}
-  m_Layer: 0
+  - component: {fileID: 8901957195650739760}
+  m_Layer: 3
   m_Name: Rleg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1532,7 +1592,7 @@ GameObject:
   - component: {fileID: 3267714881510171324}
   - component: {fileID: 4755208959363797594}
   - component: {fileID: 4755208959363797595}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: 'Right leg circle '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1723,7 +1783,7 @@ GameObject:
   - component: {fileID: 680157097946455510}
   - component: {fileID: 5905884735160174440}
   - component: {fileID: 4957434560042857279}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right hand circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1742,7 +1802,7 @@ GameObject:
   - component: {fileID: 3357621328609078555}
   - component: {fileID: 5173679980968113912}
   - component: {fileID: 1806488241657236186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left hand circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1915,7 +1975,8 @@ Transform:
   m_LocalPosition: {x: 3.82855, y: 0.103221536, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 127156212}
   m_Father: {fileID: 6844208785910401696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.792}
 --- !u!4 &3631362679224453373
@@ -2595,14 +2656,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496039994628005}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.88615596, w: -0.46338707}
+  m_LocalRotation: {x: -0, y: -0, z: 0.8574009, w: -0.51464915}
   m_LocalPosition: {x: 3.856333, y: 0.06753206, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1113238180700550496}
   m_Father: {fileID: 2998567492134650868}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -484.788}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -478.052}
 --- !u!231 &8901957195650739756
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2614,16 +2675,16 @@ SpringJoint2D:
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 7391830021851426176}
-  m_BreakForce: 574.33
+  m_BreakForce: 2852
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 3.8563328, y: 0.067531936}
+  m_Anchor: {x: -0.3, y: 0}
+  m_ConnectedAnchor: {x: 3.67, y: 0.067531936}
   m_AutoConfigureDistance: 0
   m_Distance: 0.005
   m_DampingRatio: 1
-  m_Frequency: 2.03
+  m_Frequency: 1.91
 --- !u!50 &8901957195650739757
 Rigidbody2D:
   serializedVersion: 4
@@ -2636,7 +2697,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5.13
+  m_Mass: 4.05
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.11
@@ -2663,7 +2724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e950ea22eabd5a48bca41e648dc159f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detachForce: 10
+  detachForce: 0
 --- !u!61 &8901957195650739759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2709,6 +2770,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.4956536, y: 0.9132049}
   m_EdgeRadius: 0
+--- !u!231 &8901957195650739760
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496039994628005}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 127156213}
+  m_BreakForce: 985
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 3.8206491, y: 0.0045691007}
+  m_ConnectedAnchor: {x: -0.0668988, y: 0.39846763}
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.54
+  m_DampingRatio: 1
+  m_Frequency: 4.42
 --- !u!1 &8960064877936085162
 GameObject:
   m_ObjectHideFlags: 0
