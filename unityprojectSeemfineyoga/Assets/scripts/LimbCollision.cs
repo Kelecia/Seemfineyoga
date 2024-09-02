@@ -22,6 +22,11 @@ public class LimbCollision : MonoBehaviour
     // Original color of the symbol
     private Color originalColor;
 
+    public AudioSource audioSource;
+
+    // AudioClip to play when the puzzle is complete
+    public AudioClip completionClip;
+
     void Start()
     {
         // If there is a SpriteRenderer on the same object, get the original color
@@ -29,6 +34,11 @@ public class LimbCollision : MonoBehaviour
         if (spriteRenderer != null)
         {
             originalColor = spriteRenderer.color;
+        }
+
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
         }
     }
 
@@ -61,6 +71,7 @@ public class LimbCollision : MonoBehaviour
             if (correctMatches >= totalCorrectSymbols)
             {
                 PlayCompletionAnimation();
+                PlayCompletionSound();
             }
         }
     }
@@ -124,6 +135,18 @@ public class LimbCollision : MonoBehaviour
         else
         {
             Debug.LogError("External Animator is not assigned.");
+        }
+    }
+
+    void PlayCompletionSound()
+    {
+        if (audioSource != null && completionClip != null)
+        {
+            audioSource.PlayOneShot(completionClip);
+        }
+        else
+        {
+            Debug.LogError("AudioSource or completionClip is not assigned.");
         }
     }
 }

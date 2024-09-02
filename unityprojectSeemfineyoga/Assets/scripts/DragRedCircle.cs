@@ -19,6 +19,21 @@ public class DragRedCircle : MonoBehaviour
 
     void Update()
     {
+        // Processing input as early as possible in the Update loop
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Check if the mouse is over this object
+            if (IsMouseOverObject())
+            {
+                OnMouseDown();
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            OnMouseUp();
+        }
+
+        // Drag logic
         if (isDragging)
         {
             Vector3 mousePosition = GetMouseWorldPosition();
@@ -59,5 +74,13 @@ public class DragRedCircle : MonoBehaviour
         Vector3 mouseScreenPosition = Input.mousePosition;
         mouseScreenPosition.z = mainCamera.nearClipPlane; // Set the z position to the camera's near clip plane
         return mainCamera.ScreenToWorldPoint(mouseScreenPosition);
+    }
+
+    private bool IsMouseOverObject()
+    {
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+
+        return hit.collider != null && hit.collider.gameObject == gameObject;
     }
 }
