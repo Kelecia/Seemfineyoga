@@ -851,6 +851,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.9226875
       objectReference: {fileID: 0}
+    - target: {fileID: 72518473312886992, guid: 0a18726dd9f0fc24980f35a2b1c84cf9, type: 3}
+      propertyPath: orthographic size
+      value: 6.1926975
+      objectReference: {fileID: 0}
     - target: {fileID: 345462835906306563, guid: 0a18726dd9f0fc24980f35a2b1c84cf9, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.97656524

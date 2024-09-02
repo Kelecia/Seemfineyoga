@@ -5,6 +5,8 @@ using UnityEngine;
 public class Puzzle1 : MonoBehaviour
 {
     public GameObject musicObject; // Reference to the music GameObject
+    public AudioClip clickSound; // Reference to the click sound
+    private AudioSource audioSource; // AudioSource component for playing sounds
 
     public GameObject[] triangles; // Array to hold your triangles
     public Color glowColor; // Color to change to when glowing
@@ -24,6 +26,8 @@ public class Puzzle1 : MonoBehaviour
         {
             originalColors[i] = triangles[i].GetComponent<SpriteRenderer>().color;
         }
+        // Get or add an AudioSource component
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void OnTriangleClicked(int index)
@@ -32,6 +36,8 @@ public class Puzzle1 : MonoBehaviour
         {
             return; // If the puzzle is completed, do nothing
         }
+
+        PlayClickSound(); // Play the click sound
 
         if (index == correctOrder[currentStep])
         {
@@ -106,6 +112,20 @@ public class Puzzle1 : MonoBehaviour
         {
             Debug.LogWarning("Music object not assigned.");
         }
+    }
+    private void PlayClickSound()
+    {
+        if (clickSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clickSound); // Play the click sound
+            StartCoroutine(StopSoundAfterDelay(1f)); // Stop the sound after 1 second
+        }
+    }
+
+    private IEnumerator StopSoundAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        audioSource.Stop(); // Stop the sound
     }
 
     public bool IsPuzzleCompleted()
