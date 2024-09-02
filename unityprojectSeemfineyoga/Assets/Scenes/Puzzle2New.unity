@@ -443,6 +443,109 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8659498299462537196, guid: 5239a57d433946443a4712e904633237, type: 3}
   m_PrefabInstance: {fileID: 5935586905229302523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1115381243
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1673448682821438061}
+    m_Modifications:
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.059040245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.059040245
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.05904023
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.069999725
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7100003
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.019999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6103868
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.3592948
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6061676
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.36179566
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -241.311
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.828
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -179.274
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871118356714815331, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 5871118356714815331, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_SortMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871118356714815331, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_RenderMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871118356714815331, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_SortingFudge
+      value: 4.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021843268651641680, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: m_Name
+      value: Particle System (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659498299462537196, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8659498299462537196, guid: 5239a57d433946443a4712e904633237, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5239a57d433946443a4712e904633237, type: 3}
+--- !u!4 &1314811644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3325603438203850056, guid: 5239a57d433946443a4712e904633237, type: 3}
+  m_PrefabInstance: {fileID: 1115381243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1314811646 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8659498299462537196, guid: 5239a57d433946443a4712e904633237, type: 3}
+  m_PrefabInstance: {fileID: 1115381243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1703701688
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,8 +1009,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 3.3
+  m_AngularDrag: 4.16
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -916,7 +1019,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -1252,6 +1355,7 @@ Transform:
   - {fileID: 2428979697837219787}
   - {fileID: 256080046482337375}
   - {fileID: 6457816311253298714}
+  - {fileID: 1314811644}
   m_Father: {fileID: 6209558209856086978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -243.57901}
 --- !u!4 &1783965116339058030
@@ -1676,31 +1780,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4945759805211751739}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!233 &2743207709305438680
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6262672693081862006}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: 10
-  m_BreakTorque: 10
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.1920772, y: -0.51932025}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
 --- !u!212 &2789935068711871663
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2422,7 +2501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detachForce: 0
-  particleEffect: {fileID: 0}
+  particleEffect: {fileID: 1314811646}
 --- !u!114 &4339282623987581303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2697,6 +2776,7 @@ GameObject:
   - component: {fileID: 3834634503874348236}
   - component: {fileID: 3610218998317940833}
   - component: {fileID: 5378903424279581238}
+  - component: {fileID: 5378903424279581239}
   m_Layer: 0
   m_Name: Rleg
   m_TagString: RightLeg
@@ -2718,7 +2798,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 73.6
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -2727,10 +2807,35 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!233 &5378903424279581239
+HingeJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5299191129742503519}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 675032416015660933}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 3.6241121, y: 0.12051718}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
 --- !u!4 &5508763833400721677
 Transform:
   m_ObjectHideFlags: 0
@@ -3036,7 +3141,6 @@ GameObject:
   - component: {fileID: 2383971031874267475}
   - component: {fileID: 675032416015660933}
   - component: {fileID: 4338113773085429306}
-  - component: {fileID: 2743207709305438680}
   - component: {fileID: 6262672693081862007}
   m_Layer: 0
   m_Name: Rthigh
