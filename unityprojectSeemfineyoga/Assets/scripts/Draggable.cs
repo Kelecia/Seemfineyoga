@@ -7,6 +7,7 @@ public class Draggable : MonoBehaviour
     private bool isDragging = false;
     private Vector3 offset;
     private Rigidbody2D rb;
+    private Collider2D col;
 
     public float detachForce = 10f; // Force applied when detaching
     public ParticleSystem particleEffect; // Reference to the existing particle effect
@@ -14,9 +15,16 @@ public class Draggable : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
         if (rb == null)
         {
             Debug.LogError("Rigidbody2D component not found!");
+        }
+
+        // Set initial gravity scale to 0 so objects do not fall
+        if (rb != null)
+        {
+            rb.gravityScale = 0f;
         }
     }
 
@@ -38,15 +46,14 @@ public class Draggable : MonoBehaviour
 
         if (rb != null)
         {
-            rb.isKinematic = false; // Ensure Rigidbody is not kinematic
-            rb.gravityScale = 1f; // Apply gravity
+            rb.gravityScale = 1f; // Enable gravity
             rb.AddForce(Vector2.down * detachForce, ForceMode2D.Impulse); // Apply force to simulate falling
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (isDragging)
+        if (isDragging && rb != null)
         {
             Vector3 newPosition = GetMouseWorldPos() + offset;
             rb.MovePosition(newPosition); // Move the Rigidbody2D directly

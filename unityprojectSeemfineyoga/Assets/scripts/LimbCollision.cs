@@ -16,6 +16,22 @@ public class LimbCollision : MonoBehaviour
     // Animator to play the completion animation
     public Animator externalAnimator;
 
+    // Color to change the symbol to when matched
+    public Color matchedColor = Color.green;
+
+    // Original color of the symbol
+    private Color originalColor;
+
+    void Start()
+    {
+        // If there is a SpriteRenderer on the same object, get the original color
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            originalColor = spriteRenderer.color;
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the limb's red circle is touching the correct symbol
@@ -28,6 +44,12 @@ public class LimbCollision : MonoBehaviour
 
             // Snap the limb to the symbol's position
             SnapToSymbol(other.transform);
+
+            // Change the color of the symbol to the matched color
+            ChangeSymbolColor(other.gameObject);
+
+            // Play the animation on the symbol
+            PlaySymbolAnimation(other.gameObject);
 
             // Disable dragging scripts
             DisableDragging();
@@ -48,6 +70,30 @@ public class LimbCollision : MonoBehaviour
     {
         transform.position = symbolTransform.position;
         transform.rotation = symbolTransform.rotation;
+    }
+
+    // Changes the color of the symbol when matched
+    void ChangeSymbolColor(GameObject symbol)
+    {
+        SpriteRenderer symbolRenderer = symbol.GetComponent<SpriteRenderer>();
+        if (symbolRenderer != null)
+        {
+            symbolRenderer.color = matchedColor;
+        }
+    }
+
+    // Plays a short animation on the symbol
+    void PlaySymbolAnimation(GameObject symbol)
+    {
+        Animator symbolAnimator = symbol.GetComponent<Animator>();
+        if (symbolAnimator != null)
+        {
+            symbolAnimator.SetTrigger("Correct");
+        }
+        else
+        {
+            Debug.LogWarning("Animator component not found on the symbol.");
+        }
     }
 
     // Disables both drag scripts
