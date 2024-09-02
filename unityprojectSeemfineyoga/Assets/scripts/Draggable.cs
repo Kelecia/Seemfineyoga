@@ -11,6 +11,8 @@ public class Draggable : MonoBehaviour
 
     public float detachForce = 10f; // Force applied when detaching
     public ParticleSystem particleEffect; // Reference to the existing particle effect
+    public Animator otherAnimator; // Reference to the Animator component of the other object
+    public string animationTriggerName = "PlayAnimation"; // Name of the trigger for the animation
 
     void Start()
     {
@@ -37,6 +39,12 @@ public class Draggable : MonoBehaviour
         if (gameObject.CompareTag("RightLeg") && particleEffect != null)
         {
             particleEffect.Play(); // Play the particle effect
+        }
+
+        // Trigger the animation on the other object
+        if (otherAnimator != null)
+        {
+            otherAnimator.SetTrigger(animationTriggerName);
         }
     }
 
